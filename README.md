@@ -5,15 +5,19 @@ Startup instruction
 -------------------
 
 1. build jar file with dependencies
-mvn clean compile assembly:single
+
+>mvn clean compile assembly:single
 
 2. create DB access
-database name: 	xls_parser
-username: 		postgres
-password:		secret
-create db structure
+
+database name: 	xls_parser;
+username: 		postgres;
+password:		secret;
+
 3. Migrate DB structure
-mvn flyway:migrate
+
+>mvn flyway:migrate
 
 4. run parser
-java -jar xls-parser-1.0-jar-with-dependencies.jar <file_path>
+
+>java -jar xls-parser-1.0-jar-with-dependencies.jar <file_path>
